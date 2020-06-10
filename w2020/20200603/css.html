@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<!-- <link rel="stylesheet" href"style.css" -->
+	<style>
+		/*@import url("style.css");*/
+		@import "style.css";
+	</style>
+
+</head>
+<body>
+	
+	<p style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt exercitationem unde, nulla vitae qui voluptas dicta nostrum laborum dolor quisquam, iure ad blanditiis asperiores assumenda suscipit earum maxime vel atque.</p>
+	<p style="color:#000000">Tempora id laborum adipisci. Neque dolorum tempora, modi id itaque labore assumenda, ad autem atque possimus! Labore sint, architecto, tempora accusantium ratione ipsa praesentium natus explicabo, necessitatibus nihil possimus aut?</p>
+	<p style="color:blue">Nisi porro ipsum vel facere magni animi optio libero repellat, dolore, nemo quae illo! Error esse sed ex, nostrum odio at dignissimos sint, optio nobis unde praesentium delectus autem ipsa.</p>
+	<p style="color:skyblue;font-size:30px">Nisi porro ipsum vel facere magni animi optio libero repellat, dolore, nemo quae illo! Error esse sed ex, nostrum odio at dignissimos sint, optio nobis unde praesentium delectus autem ipsa.</p>
+
+<style>
+	ul{color:#eddcff; font-size:18px;}
+	#nav{color:white;}
+	/*nav의 컬러를 바꾸고 싶다면 #을 달아 색상 변경하기*/
+/* 우선순위 <tag name < class name < id name < inline style*/
+
+</style>
+
+
+	<!-- ul#nav>li.menu*5>{menu} -->
+	<ul id="nav">
+		<li class="menu" style="color:yellow">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+		<li class="menu">menu</li>
+	</ul>
+
+<style>
+ #nav1>li{color:green;}
+ 	ul#nav1>li{color:green;}
+ 	ul#nav1>li>a{color:green;}
+
+ 	ul#nav1 a{color:blue;}
+
+</style>
+	<!-- ul#nav1>li.menu1*5>{menu} -->
+	<ul id="nav1">
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+		<li class="menu1">menu</li>
+	</ul>
+
+<!-- ul>li*4>{menu} -->
+<ul>
+	<li>menu</li>
+	<li>menu</li>
+	<li>menu</li>
+	<li>menu</li>
+</ul>
+
+<!-- header>h1>nav>ul>li*4 -->
+<header id="header">
+	<h1>logo</h1>
+	<nav id="nav">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+	</nav>
+</header>
+
+</body>
+</html>

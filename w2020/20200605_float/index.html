@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		/*주석처리1*/
+		*{padding:0;margin: 0;}
+		body{background-image:url(../images/bg_grid.gif);}
+		.wrap {background-color: #f00;width: 200px;}
+		.box1{float:left;}
+		.box2{float:left;}
+		.clear{clear:both;}
+		.test{width: 100px;height: 100px;background-color: #f0f;}
+		.after{width: 200px;height: 200px;background-color: skyblue;}
+
+		.after:after{content:"안녕";}
+		.after:before{content:"디지몬";}
+
+		.wrap:after{content:"";
+					display:block;
+					clear:both;}
+
+	/*	div.wrap>div.box1
+			{width: 100px;
+			height: 100px;
+			background-color: #ff0;
+			float:left;}
+		div.wrap>div.box2
+			{width: 100px;
+			height: 100px;
+			background-color: #0ff;
+			float:left;}
+*/
+/*주석처리*/
+/*	.testimg{width: 200px;
+			height: 200px;
+			float:left;}*/
+/*	img{width: 200px;height: 200px;}*/
+	</style>
+</head>
+<body>
+	<!-- 주석처리1 -->
+	<div class="wrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+
+	<div class="test"	></div>
+
+	<div class="after">
+		center
+	</div>
+<!-- 주석처리 -->
+<!-- 		<img src="../images/testimg.jpg" alt="에펠탑" class="testimg">
+		Lorem ipsum dolor sit amet, consectetur.<br>Lorem ipsum dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Dolorum, esse.
+<div>p 안녕</div> -->
+</body>
+</html>
