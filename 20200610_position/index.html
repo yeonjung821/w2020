@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>position</title>
+	<style>
+		*{padding: 0;margin: 0;box-sizing:border-box;}
+		a:link,a:visited{color:#000; text-decoration:none;}
+		li{list-style:none;}
+
+		body{background-image: url(../images/bg_grid.gif);}
+
+		div.box1,div.box2,div.box3,
+		div.box4,div.box5,div.box6{width: 100px;height: 100px;}
+		div.box1{
+			background-color: skyblue;
+			}
+			/*position:relative;left:10px;top:20px;z-index:2;*/
+
+/*			position:relative;left:20px;top:20px;
+			margin-left:50px;margin-top:50px;*/
+		div.box2{
+			background-color: red;
+			position:absolute;top:0px; 
+			left:40%;margin-left:0px;
+			}
+			/*position:absolute;left:40px;top:40px;z-index:1;*/
+		div.box3{
+			background-color: orange;
+			position:absolute; right:0px; top:0px;}
+
+		div.box4{
+			background-color: gray;
+			position:absolute; left:0px;bottom:0px;}
+
+		div.box5{
+			background-color: aqua;
+			position:absolute; left:40%; bottom:0px;}
+
+		div.box6{
+			background-color: darkblue;
+			position:absolute; right:0px; bottom:0px;}
+
+		div.boxWrap{
+			width: 500px;height: 300px;
+			background-color: purple;
+			margin: 0 auto;
+			position:relative;
+		}
+
+		div.fixed{background-color: silver;
+			position:fixed;width: 100%; height: 70px; bottom: 0;} /*부모자의 크기의 %*/
+
+	</style>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="box3">box3</div>
+		<div class="box4">box4</div>
+		<div class="box5">box5</div>
+		<div class="box6">box6</div>
+	</div>
+	<div class="fixed">fixed</div>
+</body>
+</html>

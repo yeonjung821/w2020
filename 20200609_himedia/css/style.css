@@ -1,0 +1,151 @@
+@charset "utf-8";
+/*한글깨져서 써야함*/
+
+/*reset*/
+	*{margin: 0;padding: 0;box-sizing:border-box}
+	a:link,a:visited{color:#000;text-decoration:none;}
+	li{list-style:none;}
+	.clearfix:after{content:"";display: block;clear: both;}
+
+	/*header*/
+	div.utilWrap{border-bottom: 1px solid #ccc;}
+	div.util{width: 980px;margin: 0 auto;}
+	ul.utilMenu{margin-left:auto;width: 268px;}
+	ul.utilMenu>li{float: left;position: relative;}
+	ul.utilMenu>li:last-child a{padding-right:0px;}
+	ul.utilMenu>li:after{
+		content:"";display: block;width: 1px;height: 10px;
+		background-color: #000;position: absolute;top:10px;right: 0;
+	}
+	ul.utilMenu>li:last-child:after{content:"";display:none;}
+	ul.utilMenu>li>a{display: block;padding:0 10px;line-height:30px;}
+
+	div.headerTop{
+		width: 980px;height: 75px;
+		margin:0 auto;
+		position: relative;
+		/*원래 position 안 넣었었는데, 밑의 toggle 위치 설정 위해서 넣음.*/
+	}
+	div.headerTop>h1.logo{
+		text-align:center;
+		line-height:75px
+	}
+	div.headerTop>div.toggle{
+		width: 50px;height: 50px;
+		border: 1px solid #ddd;
+		position: absolute;right: 0;top:13px;cursor:pointer;
+	}
+	/*div.header>div.toggle>div.box1 = div.header div.box1 = .header .box1*/
+	div.headerTop div.box1,
+	div.headerTop div.box2,
+	div.headerTop div.box3
+	{
+		width: 20px;height: 3px;background-color: #666;
+		position: absolute;border-radius:2px;
+	}
+	div.headerTop div.box1{top: 15px;left: 15px;}
+	div.headerTop div.box2{top: 23px;left: 15px;}
+	div.headerTop div.box3{top: 31px;left: 15px;}
+
+	div.gnbWrap{background-color: #1d5da4;}
+	div.gnbWrap>nav.gnbMenu{width: 980px;margin:0 auto;}
+	div.gnbWrap>nav.gnbMenu>ul:after{
+		content:"";display: block;clear: both;
+	}
+	div.gnbWrap>nav.gnbMenu>ul>li{float: left;width:163.3333px;border-right:1px solid #316faa;}
+	div.gnbWrap>nav.gnbMenu>ul>li>a{
+		color:white;display: block;
+		text-align: center;height: 45px;line-height:45px;
+	}
+	div.gnbWrap>nav.gnbMenu>ul>li:first-child{border-left:1px solid #316faa;}
+	div.gnbWrap>nav.gnbMenu>ul>li>a:hover{
+		background-color:#233e6f;
+	}
+
+
+	/*visualWrap*/
+	div.visualWrap{
+
+		height: 400px;
+		background-color:#233e6f;
+		background-image:url(../image/visual_bg01.jpg);
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	div.visualWrap>div.visual{
+		width: 980px;height: 400px;
+		_background-color:skyblue;
+		margin: 0 auto;
+		position: relative;overflow:hidden;
+	}
+	div.visual>img.light{
+		position: absolute;right:10px;top:0px;
+	}
+	div.visual>img.vTitle{
+		position: absolute;left:0;top:100px;
+	}
+
+
+	/*section*/
+	div.section{background-color:#eee;margin-bottom: 25px;}
+	div.section ul.card{width: 980px;margin:0 auto;}
+	div.section ul.card:after{content:"";clear: both;display: block;}
+	div.section ul.card>li{
+		float: left;width: 20%;height: 195px;text-align: center;
+		color:white;padding: 20px;
+	}
+	div.section ul.card>li:nth-child(1){background-color:#7c99b9;}
+	div.section ul.card>li:nth-child(2){background-color:#4f74a1;}
+	div.section ul.card>li:nth-child(3){background-color:#4b8ce0;}
+	div.section ul.card>li:nth-child(4){background-color:#3db5f2;}
+	div.section ul.card>li:nth-child(5){background-color:#95c8ff;}
+	div.section ul.card>li>img{margin-bottom: 15px;}
+	/*margin top은 오류가 많이나서 bottom을 쓰는 편이 좋음*/
+	div.section ul.card>li>p{font-size:12px;}
+	div.section ul.card>li>h3{margin-bottom: 8px;}
+
+	/*contentsOne*/
+	div.conWrapOne{width: 980px;margin: 0 auto; margin-bottom: 25px;}
+	div.conWrapOne ul.card{}
+	div.conWrapOne ul.card>li{float: left;width: 310px;margin-right: 25px;cursor: pointer;}
+	div.conWrapOne ul.card>li:last-child{margin-right:0;}
+	div.conWrapOne img.cardImg{display: block;}
+	div.conWrapOne div.cardBody{
+		padding:20px;border: 1px solid #ddd;
+		border-top:0 none;color:#9b9b9b;
+	}
+	div.conWrapOne h3{margin-bottom: 7px;color:#626262;}
+
+/*contents Two*/
+	div.conWrapTwo{width: 980px;margin: 0 auto; margin-bottom: 25px;}
+	div.conWrapTwo ul.card>li{
+		float: left; width: 310px;margin-right: 25px; 
+		border: 1px solid #ddd;padding: 20px;
+		;position: relative;
+		overflow:hidden;color:#9b9b9b;
+	}
+	div.conWrapTwo ul.card>li:last-child{margin-right: 0;}
+	div.conWrapTwo div.card_body{width: 150px;position: relative;}
+	div.conWrapTwo img{position: absolute;top: 10;right: -10px;}
+	div.conWrapTwo h3{margin-bottom: 7px;color:#9b9b9b;}
+	div.conWrapTwo p{margin-bottom: 10px; font-size:12px;}
+	div.conWrapTwo a{font-size:14px;color:#4b8ce0;}
+
+/*footer*/
+	footer#footer{background-color: #5e5e5e;}
+	.footerTopWrap{background-color: #4d4d4d;}
+	.footerTop{width: 980px;margin: 0 auto;overflow: hidden;position: relative;}
+	.footerTop li{float:left;color:white;position: relative;}
+	.footerTop li:after{
+		content:"";display:block;width: 1px;height: 16px;background-color: white;
+		position: absolute;top: 13px; left: -1px;
+	}
+	.footerTop li a{display:block;padding: 0 15px;color:white;line-height: 40px;}
+	.footerTop li:first-child a{padding-left:0;}
+	.footerTop .top{
+		width: 40px;height: 40px;background-color: orange;
+		position: absolute;right: 0;top: 0;
+	}
+	.footerBottomWrap{width: 980px;margin: 0 auto; color:white;padding: 20px 0;}
+	.footerBottomWrap .logo{float: left;width: 200px; font-size: 20px;font-weight: bold;}
+	.footerBottomWrap .copy{float: left;}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider tab</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				controls:false, //bxslider prev next 버튼 사용 유무
+				pagerCustom:".bx-pager",
+				// mode:"vertical",
+				auto:true
+			});
+		});
+	</script>
+	<style>
+		.wrapper{width: 1260px; height: 740px;
+			margin: 0 auto; position: relative;
+		}
+
+		.bx-pager{
+			position: absolute;bottom: 0;
+			width: 100%;
+		}
+		.bx-pager a{
+			display: block;width: 25%;
+			float: left;line-height: 40px;
+			text-align: center;
+			background-color: #f00; color:white;
+			font-size:1.5em;
+		}
+		.bx-pager a.active{
+			background-color: pink;
+		}
+
+
+		div.sliderWrap{width: 1260px; margin: 0 auto;}
+		.bx-wrapper {
+	    -moz-box-shadow: none;
+	    -webkit-box-shadow: none;
+	    box-shadow: none; /*//그림자 길이와 색*/
+	    border: 0 none;
+	    margin-bottom: 0;
+		}
+
+
+
+		/*외부 스타일 시트는 위로, 내가 만든 스타일 시트는 아래로. (편리하게 수정 하기위해)*/
+	    .sliderWrap .txtWrap{
+	    	width: 400px; height: 200px;
+	    	/*background-color: orange;*/
+	    	position: absolute; top: 90px;
+	    	right: 50px;
+	    }
+	   /*내가 작성한 태그가 뭐가있나 확인해서 일단 다 나열해보고 수정할것들 수정하기
+	    .sliderWrap .txtWrap h2{}
+	    .sliderWrap .txtWrap p{}
+	    .sliderWrap .txtWrap a{}*/
+	    .sliderWrap .txtWrap h2{font-size: 30px}
+	    .sliderWrap .txtWrap h2:after{
+	    	content:"";display:block;height: 2px;
+	    	background-color: orange;margin: 10px 0;
+	    }
+	    .sliderWrap .txtWrap p{ height: 80px; }
+	    .sliderWrap .txtWrap a{
+	    	display: block; /*background-color: #000; */
+	    	/*width와 height 값 넣기 위해서는 display:block 값 메겨줘야함. 기본적으로 block단위를 잡지 않으면 그 외의 어떤 것도 적용되지 않음. inline 테그는 width, height의 값을 넣을 수 없음. */
+	    	/*background-color: rgba(0,0,0,0.5);*/
+	    	/*rgb(0,0,0) rgba(0,0,0,0)*/
+	    	/*opacity:0.5; */
+	    	width: 200px;height: 40px;
+	    	display: block;text-align: center;line-height: 40px;
+	    	border: 1px solid #000; border-radius: 20px;
+	    	font-weight: bold;color: #000; position: absolute;
+	    }
+	    .sliderWrap .txtWrap a:hover{
+	    	/*opacity: 1;*/background-color:rgba(255,0,0,1);color: #fff;
+	    }
+	</style>
+</head>
+<body>
+	<!-- ul.slider>li>img[images/main_slider01.jpg] -->
+	<div class="wrapper">
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>Lorem ipsum dolor sit.1</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>Lorem ipsum dolor sit.2</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>Lorem ipsum dolor sit.3</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="">
+					<div class="txtWrap">
+						<h2>Lorem ipsum dolor sit.4</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, sapiente.</p>
+						<a href="#" class="btn">바로가기</a>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+		
+		<div class="bx-pager clearfix">
+			<a href="#" data-slide-index="0" class>menu1</a>
+			<a href="#" data-slide-index="1" class>menu2</a>
+			<a href="#" data-slide-index="2" class>menu3</a>
+			<a href="#" data-slide-index="3" class>menu4</a>
+		</div>
+	</div>
+</body>
+</html>
