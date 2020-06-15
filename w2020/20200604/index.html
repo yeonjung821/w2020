@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>selector</title>
+	<style>
+		/*h3{color:brown;}*/
+		/*h3,li{color:brown;}*/
+		*{padding:0px;
+		  margin:0;}
+		/*padding: 0;margin: 0;p0,m0*/
+		a:visited,
+		a:link{color: #333;}
+		a:{text-decoration:none;}
+
+
+		.main{background-color: #fff;
+				background-image:url(../images/bg_grid.gif);}
+		.warning{color: #f00;}
+		#list{background-color: #666;}
+		#list>li{color:#fff;}
+		#list>li.active{color:#f00;}
+		div>strong{background-color: #fff;}
+		ul>li>strong{background-color: #000;}
+		ul#list strong{background-color: #00f;}
+		div>strong{background-color: #fff;}
+		ul>li>strong{background-color: #000;}
+		/*hover : 마우스 가져다 뒀을 때 색 바뀌는거*/
+		#list>li:hover{background-color: #ddd}; 
+		/*actibe : 마우스로 눌렀을때 색상 바뀌는 거*/
+		#list>li:active{background-color: #f00;}
+	</style>
+</head>
+<body class="main">
+	<!-- h3>lorem3 -->
+	<h3>Lorem ipsum dolor.</h3>
+	<!-- hr>div>div>lorem3 -->
+	<hr>
+		<div>
+			<div>Lorem <strong>ipsum</strong> dolor.</div>
+			<ul id="list">
+				<li><span>html</span></li>
+				<li class="active"><div>css</div>
+					<a href="http://www.korea.com">코리아</a>
+				</li>
+				<li>
+					<a href="http://www.naver.com">네이버</a>
+				</li>
+				<li><strong>javascript</strong></li>
+			</ul>
+		<div class="warning">Lorem ipsum dolor.</div>
+	</hr>
+</body>
+</html>
