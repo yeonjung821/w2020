@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -58,4 +59,66 @@
 
 		<div class="box3">text3</div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset*/
+		*{margin: 0;
+		padding: 0;	}
+		a:link, a:visited{
+				color:black;
+				text-decoration:none 
+				}
+		li{list-style:none;}
+
+		body{background-image:url(../images/bg_grid.gif);}
+
+		/*wrap*/
+		div.wrap{
+			width: 400px; height: 200px;
+			background-color: #f00;
+			}
+
+		div.wrap > div.box1{
+			width: 200px;height: 200px;
+			float:left;
+			background-color: #ff0;
+			}
+		
+		div.wrap > div.box2{
+			background-color: #f0f;
+			width: 150px;height: 150px;
+			float:left;
+		}
+
+		div.box3 {background-color: #00f;
+			width: 200px;height: 200px;}
+
+		/*div.wrap > div.clear{clear:both;}*/
+
+		div.warp:after{
+			content:"@@";
+			display:block;
+			clear:both;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<!-- .box$*2>{text$} -->
+		<div class="box1">text1</div>
+		<div class="box2">text2</div>
+		<!-- <div class="clear"></div> -->
+	</div>
+
+		<div class="box3">text3</div>
+</body>
+>>>>>>> 256b408ce0d4278f4ffc207a06ebfff22f19550d
 </html>

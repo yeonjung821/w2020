@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -75,4 +76,83 @@
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*reset-초기 작업이라는 의미*/
+		*{margin: 0;padding: 0;}
+		a:link,
+		a:visited{color:#000; text-decoration:none;}
+		li{list-style:none;}
+		/*ul.list = .list 같음. 우선순위로 따지기에는 ul.이 높음*/
+		ul.list>li{
+				background-color: skyblue; 
+				width: 200px;
+				}
+		ul.list>li>a{
+				display:block;
+				text-align:center;
+				line-height:30px;
+				} 
+		/*dispaly:block; = 상위 li 태그의 크기만큼 블럭을 잡아줌*/
+		ul.list>li>a:hover{background-color: orange; 
+							color:#fff;
+							}	
+
+		/*아래 둘중의 하나 편한걸로 선택해서 작성하면 됨.*/
+		/*ul.list>li.blue{background-color: #00f;}*/
+		/*ul.list>li:nth-child(5){background-color: #f00;}*/
+		ul.list>li:nth-child(3){background-color: #f00;}
+
+		ul.list>li:first-child{background-color: #ff0;}
+		ul.list>li:last-child{background-color: #ff0;}
+/*		=위 first,last와  같은 뜻 
+		*중요한건 ul.list>li =이 부분. 부모자 꼭 써야함.
+		ul.list>li:first-child,
+		ul.list>li:last-child{background-color: #ff0;}*/
+
+	
+		.blue{background-color:gray!important;}
+		/*.blue{background-color:gray;} 하면 적용 안되지만 위처럼 쓰면 적용 됨.*/
+
+
+		/*우선순위* < tag name < class < id < inline style <!important*/
+
+		div.box{width:300px;
+				height: 300px;
+				background-color: gray;
+				color:#00F;}
+
+		div.box:after{
+				content:"!!!!";
+				color:white;
+				}
+
+	</style>
+</head>
+<body>
+	<!-- ul.list>li*10>a[#]>{list$} -->
+	<ul class="list">
+		<li><a href="#">list1</a></li>
+		<li><a href="#">list2</a></li>
+		<li><a href="#">list3</a></li>
+		<li><a href="#">list4</a></li>
+		<li class="blue"><a href="#">list5</a></li>
+		<li><a href="#">list6</a></li>
+		<li><a href="#">list7</a></li>
+		<li><a href="#">list8</a></li>
+		<li><a href="#">list9</a></li>
+		<li><a href="#">list10</a></li>
+	</ul>
+
+	<div class="box">안녕하세a</div>
+
+
+</body>
+>>>>>>> 256b408ce0d4278f4ffc207a06ebfff22f19550d
 </html>
