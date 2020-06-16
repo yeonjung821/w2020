@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sprite 이미지 뽑아두고 사용</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<!-- <link rel="stylesheet" href="../css/jquery.bxslider.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/jquery.bxslider.js"></script> -->
+	<style>
+		body{background-color: skyblue;}
+		.logo{
+			width: 445px; height: 110px; margin: 0 auto;
+			background-image: url(../images/sprite_naver.png);
+			background-position: 5px -317px;
+			background-repeat: no-repeat;
+		}
+
+		.logo a{display: block; line-height: 110px;
+			text-indent: -9000px; 
+			/*text-indent : 안쪽으로 글씨 들여쓰기. 즉 블럭잡고 글자 숨겨서 링크는 걸린 상태*/
+		}
+
+		.j_naver{
+			width: 130px;height: 30px;
+			background-image: url(../images/sprite_naver.png);
+			background-repeat: no-repeat;
+			background-position: -690px -516px;
+	
+		}
+		.j_naver:hover{
+			background-position: -420px -612px;
+		}
+
+		.j_naver a{display: block;line-height: 25px;
+			text-indent: -9999px;
+		}
+
+		.up{
+			width: 110px;height: 120px;
+			background-image: url(../images/sprite_naver.png);
+			background-repeat: no-repeat;
+			background-position: -417px -430px;
+			float: right;
+		}
+		.up a{display: block;line-height: 120px;
+			text-indent: -9999px ;
+		}
+
+		.up:hover{
+			background-position: -305px -430px;
+		}
+
+		.nav{width: 980px;margin: 0 auto;}
+		.nav ul{}
+		.nav li{
+			float: left;width: 140px;height: 50px;
+			background-image: url(../images/sprites.png);
+			background-repeat: no-repeat;transition:0.3s;
+		}
+		.nav li a{display: block;line-height: 50px;
+			text-indent: -9999px; }
+		.nav li:nth-child(1){background-position: 0 0;}
+		.nav li:nth-child(2){background-position: -140px 0;}
+		.nav li:nth-child(3){background-position: -280px 0;}
+		.nav li:nth-child(4){background-position: -420px 0;}
+		.nav li:nth-child(5){background-position: -560px 0;}
+		.nav li:nth-child(6){background-position: -700px 0;}
+		.nav li:nth-child(7){background-position: -840px 0;}
+
+		.nav li:nth-child(1):hover{background-position: 0 -50px;}
+		.nav li:nth-child(2):hover{background-position: -140px -50px;}
+		.nav li:nth-child(3):hover{background-position: -280px -50px;}
+		.nav li:nth-child(4):hover{background-position: -420px -50px;}
+		.nav li:nth-child(5):hover{background-position: -560px -50px;}
+		.nav li:nth-child(6):hover{background-position: -700px -50px;}
+		.nav li:nth-child(7):hover{background-position: -840px -50px;}
+
+		.nav li:nth-child(1).active{background-position: 0 -50px;}
+		.nav li:nth-child(2).active{background-position: -140px -50px;}
+		.nav li:nth-child(3).active{background-position: -280px -50px;}
+		.nav li:nth-child(4).active{background-position: -420px -50px;}
+		.nav li:nth-child(5).active{background-position: -560px -50px;}
+		.nav li:nth-child(6).active{background-position: -700px -50px;}
+		.nav li:nth-child(7).active{background-position: -840px -50px;}
+		.nav li:nth-child(7).active{background-position: -840px -50px;}
+	</style>
+</head>
+<body>
+
+
+<!-- 	<div class="logo">
+		
+	</div> -->
+	<h1 class="logo"><a href="#">네이버</a></h1>
+	<div class="j_naver">
+		<a href="#">쥬니어네이버</a>
+	</div>
+	<div class="up">
+		<a href="#">상단</a>
+	</div>
+
+	<div class="nav">
+		<!-- ul>li*7>a[#]>{menu$} -->
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+			<li class="active"><a href="#">menu7</a></li>
+
+		</ul>
+	</div>
+</body>
+</html>

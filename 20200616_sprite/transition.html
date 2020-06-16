@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		.box{
+			width: 100px;height: 100px;
+			background-color: #f00;
+			transition-duration: 1s; /*작동되는 시간. 0.3초 후*/
+			/*transition-delay: 1s; *//*적용되어지는 시간.1초 후 생성*/
+	/*		transition-property: height; //delay:1s;에 property: height; = 1초 후에 height 생성 됨.*/
+		}
+		.box:hover{width: 300px; height: 200px;
+			background-color: #ff0;
+		}
+
+
+		.box1{
+			width: 100px;height: 100px;
+			background-color: #f00;
+			transition-duration: 1s; 
+			transition-timing-function: linear;
+		}
+		.box1:hover{
+			width: 300px; height: 200px;
+			background-color: #ff0;
+		}
+
+		.box2{
+			width: 100px;height: 100px;
+			background-color: #f00;
+			transition-duration: 1s; 
+			transition-timing-function: ease;
+		}
+		.box2:hover{
+			width: 300px; height: 200px;
+			background-color: #ff0;
+		}
+
+		.box3{
+			width: 100px;height: 100px;
+			background-color: #f00;
+			transition-duration: 1s; 
+			transition-timing-function: ease-in; /*차가 도착, 빠르다 천천히*/
+		}
+		.box3:hover{
+			width: 300px; height: 200px;
+			background-color: #ff0;
+		}
+
+		.box4{
+			width: 100px;height: 100px;
+			background-color: #f00;
+			transition-duration: 1s; 
+			transition-timing-function: ease-out; /*차가 출발, 천천히다가 빨리*/
+		}
+		.box4:hover{
+			width: 300px; height: 200px;
+			background-color: #ff0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+</body>
+</html>

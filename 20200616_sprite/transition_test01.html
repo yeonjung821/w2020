@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition test</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.container{width: 1200px;margin: 0 auto;}
+		.container h3{text-align: center;}
+		.container h3:after{
+			content:"";display: block;
+			background-color: #000 ;margin: 10px auto;
+		}
+		.container p{text-align: center;}
+		.container .hdTitle{margin-bottom: 20px;}
+		.container ul.content li{
+			width: 285px; float: left; 
+			margin-right: 20px; position: relative;
+			overflow: hidden;
+		}
+		.container ul.content .overlay{
+			width: 285px;height: 285px; position: absolute;
+		}
+		.container ul.content li:last-child{margin-right: 0;}
+		.container ul.content li img{width: 100%;}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="hdTitle">
+			<h3>GALLERY</h3>		
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+		<ul class="content">
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum dolor.</div>
+				</div>
+			</li>
+						<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum dolor.</div>
+				</div>
+			</li>
+						<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum dolor.</div>
+				</div>
+			</li>
+						<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum dolor.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>

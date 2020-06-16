@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition1</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*.box{
+			width: 300px;height: 300px;border: 1px solid #000;
+			box-sizing: content-box;overflow: hidden;
+			position: relative;
+		}
+		.box img{display: block;}
+		.overlay{
+			width: 300px;height: 300px;
+			background-color: orange;
+			position: absolute;top: 300px;
+			transition: 0.3s;
+		}
+		.box:hover .overlay{top: 0;}*/
+
+		.box{
+			width: 300px;height: 300px;
+			position: relative; overflow:hidden; /*overflow:박스를 넘치는 부분은 보이지 않도록.*/
+		}
+		.box img{display: block;}
+		.box .overlay{
+			width: 300px;height: 300px;
+			background-color:rgb(0,0,0,0.3);
+			position: absolute;top: 300px;
+			transition: 0.2s;color:white;top: 250px;
+		}
+		.box:hover .overlay{top: 0;} /*박스가 위로했을때의 위의 overlay 의 top과 똑같은 값이 되도록*/
+		.box .txt{
+			text-align: center; padding-top: 10px;
+			padding-left: 20px;padding-right: 20px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="txt">
+			Lorem ipsum.
+			<br><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, ducimus.</div>
+		</div>
+	</div>
+
+
+
+<style>
+	.container{width: 1200px;margin: 0 auto;padding: 50px 0;}
+	.container h2{text-align: center;}
+	.container h2:after{
+		content:"";display: block;
+		width: 300px;height: 2px;
+		background-color: #888;margin: 10px auto;
+	}
+	.container p{text-align: center;}
+	.container .hdTitle{margin-bottom: 20px;}
+	.container ul.content li{
+		float: left; width:281.25px;margin-right: 25px;
+		position: relative;overflow: hidden;
+		/*overlay에 position: absolute를 주고 li에 position: relative를 준 결과. overflow: hidden;를 주게되면 li를 넘어가는 부분을 숨겨줌.->그리고 overlay stylesheet에서 top주면 짜잔! */
+		border-radius: 40px 0;
+	}
+	.container ul.content .overlay{
+		width: 281.25px; height: 281.25px;/*content img에 맞춰 overlay w,h에도 적용*/
+		position: absolute;background-color: rgba(255,0,0,0.5);
+		top: 300px; /*top은 transition 적용할 초기값.둘은 같이 써야만함.*/transition: 0.3s
+	} 
+	.container ul.content li:hover .overlay{top: 0;}
+	.container ul.content li img{width: 100%;} /*img의 width값 자체가 300이다보니 바로 위에 써있는 width:281.25가 적용 될 수 없음. 그러나 li의 자식인 img 자체에 width를 100%로 줌으로서 적용가능.*/
+	.container ul.content li:last-child{margin-right: 0;} /*위에서 다른 부분들의 margin-right값에 25를 줬으니 제일 오른쪽것은 빼는것.*/
+
+	.bgOne{
+/*		background-color: skyblue;
+		background-image: url(../images/pc01.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;*/
+
+		background:skyblue url(../images/pc01.jpg) no-repeat center fixed;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+</style>
+<div class="container">
+	<div class="hdTitle">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, enim.</p>
+	</div>
+	<!-- ul.content>li*4 -->
+	<ul class="content clearfix">
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>		
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>		
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="conWrap bgOne">
+	<div class="container">
+		<div class="hdTitle">
+			<h2>GALLERY</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, enim.</p>
+		</div>
+		<!-- ul.content>li*4 -->
+		<ul class="content clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>		
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>		
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="container">
+	<div class="hdTitle">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, enim.</p>
+	</div>
+	<!-- ul.content>li*4 -->
+	<ul class="content clearfix">
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>		
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>		
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+		<li>
+			<img src="../images/testimg.jpg" alt="">
+			<div class="overlay">
+				<div class="txt">Lorem ipsum.</div>
+			</div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
