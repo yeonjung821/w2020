@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+
+		/*
+		1 .box 크기, .overlay 크기 먼저 설정.
+		2 .overlay 색상 설정, position 설정.
+		3 .overlay top 설정, .box position 설정.
+		4 .box:hover .overlay에 top값 설정. + transition값 주기
+		5 .box .overlay .txt 크기값 설정
+		6 .box .overlay .txt의 line-height - bgc - position 순으로 설정 
+		7 .box .overlay .txt의 l,ml,t,mt 등의 크기 설정으로 정렬 맞춰줌 + text-align
+		8 .box overlay에 */
+
+		.box{
+			width: 300px;margin: 0 auto;
+			overflow: hidden; position: relative;
+			cursor:pointer ;
+		}
+		.box .overlay{
+			width: 300px;height: 300px; 
+			background-color:rgba(0,0,0,0.5);
+			position: absolute;top: 0px;
+			transition: 0.3s; opacity: 0;
+		}
+		.box:hover .overlay{opacity: 1;}
+		.box .overlay .txt{
+			width: 120px; height: 120px;
+			line-height: 120px;
+			background-color: white;
+			position: absolute;
+			text-align: center;
+			left: 50%; margin-left: -60px;
+			top: 50%;margin-top: -60px; /*+ w,h,line-height가 같으면 완전 중앙 정렬*/
+			/*left: 50%;top: 50%; 는 중앙에 선이 있다고 치면 4번째 면에 존재(x,y축 기준)*/
+			border-radius: 60px
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="overlay">
+			<div class="txt">Lorem ipsum.</div>
+		</div>
+		<div class="view"></div>
+	</div>
+
+	<style>
+		.container{
+			width: 1200px;margin: 0 auto;
+			padding: 50px 0;
+		}
+		.container h2{
+			text-align: center;
+			position: relative;}
+		.container h2:after{
+			content: "";display: block;
+			width: 10px;height: 10px;
+			background-color: navy;
+			position: absolute; top: -10px;
+			left: 50%; border-radius: 5px;
+			margin-left: -5px;
+		}
+		.container p{text-align: center;color: #666}
+
+
+		/*li의 float와 크기값 설정해준 후 ul에 class 적용.
+		  img에 width 100% 준 후
+		  li의 margin-right 설정.
+		  li의 liast-child에 margin-right 적용.*/
+		.container .content li{
+			float: left; width: 281.25px; 
+			margin-right: 25px;
+			position: relative; 
+			overflow: hidden;
+			cursor: pointer;
+		}
+
+		.container .content li:last-child{margin-right: 0;}
+		.container .content img{width: 100%;}
+		.container .content .overlay{
+			width: 281.25px;height: 281.25px;
+			background-color:rgba(0,0,0,0.3);
+			/*display: none;*/
+			position: absolute; top: 0;
+			opacity:0;
+			transition: 0.3s;
+		}
+		.container .content .overlay .txt{
+			width: 150px;height: 150px;
+			text-align: center;
+			line-height: 150px;
+			background-color: pink; color:#fff;
+			border-radius: 20px;
+			left: 50%;top: 50%;
+			margin-left: -75px;margin-top: -75px;
+			position: absolute;
+		}
+		.container .content li:hover .overlay{
+			opacity:1; /*display: block;*/} 
+		/*li에 hover를 주고. 효과는 overlay에 준다는 의미*/
+
+		/*display만 적용	하면 커서를 가져다댔을때 보여지는 효과.
+		87번 줄 .overlay의 display:none;을 해체하고 
+		opacity와 transition을 적용해야 애니메이션 효과가 됨. */
+
+		.bgOne{background-color: pink;}
+	</style>
+
+	<div class="container">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, consequuntur!</p>
+		<div class="content">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<div class="wrap bgOne">
+	<div class="container">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, consequuntur!</p>
+		<div class="content">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+	<div class="container">
+		<h2>GALLERY</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, consequuntur!</p>
+		<div class="content">
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="overlay">
+						<div class="txt">Lorem ipsum.</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
