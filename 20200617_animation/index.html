@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{
+			width: 100px;height: 100px;
+			background-color: #f00;
+			animation-name: ani;
+			_animation-duration: 1s;
+			/*가장 중요. 작동 시간. duration없이는 모든 설정값 무용지물*/
+			animation-fill-mode: forwards; 
+			/*종료시점 : 앞부분을 의미;*/
+			animation-iteration-count: 2; 
+			/*반복한다는 의미 : 반복할 숫자;. 무한반복은 infinite*/
+			animation-direction: alternate; 
+			/*번갈아서 나오기 :; alternate(정방향, 주로 사용) ,reverse : 반대,거꾸로;*/
+			_animation-delay: 1s;
+			/*지연 시간 : ~후에 작동 된다는 의미. ex)anima:1s; 1초 후 작동*/
+			animation-timing-function: ease;
+			/*position: absolute; left값 작동 하려면 position 꼭 있어야함*/
+		}
+
+		@keyframes ani{
+/*			from{width: 100px;} 시작
+			to{width: 200px;} /*끝*/*/
+			0%{width: 100px;background-color: #f00;height: 100px;left: 0;}
+			50%{width: 300px;background-color: #0f0;height: 50px;left: 200px;}
+			100%{width: 500px;background-color: #00f;height: 10px;left: 300px;}
+		} /*animation에 주고싶은 (크기,색상 등의)값을 from{}와 to{}의 {}에 넣는다.
+			가장 중요한 값은 duration. 이것을 주지않으면 animation의 설정값은 무용지물*/
+		
+
+		/*2번째 .boxWrap의 .line*/
+		.boxWrap{
+			width: 300px;height: 300px;
+			background-color: pink;
+			position: relative;
+		}
+		.line{width: 0;height: 10px;
+			background-color: purple;
+			_animation-name: lineAni;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+		}
+		@keyframes lineAni{
+			from{width: 0;}
+			to{width: 100%;}
+		}
+		/*3번째 .boxWrap의 .line1*/
+		.line1{width: 10px;height: 0;
+			background-color: purple;
+			position: absolute; top: 0;
+			_animation-name: lineAniOne;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes lineAniOne{
+			from{height: 0;}
+			to{height: 100%;}
+		}
+
+
+
+		
+		/*4번째 .boxWrap의 .line2, line3 - 혼자 연습*/
+		.line2{
+			right: 0px; bottom: 0px;
+			width: 10px;height: 0px;
+			background-color: purple;
+			position: absolute; 
+			_animation-name: lineAniTwo;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes lineAniTwo{
+			from{height: 0;}
+			to{height: 100%;}
+		}
+
+
+		.line3{
+			width: 0;height: 10px;
+			background-color: purple;
+			position: absolute;
+			right: 0;bottom: 0;
+			_animation-name: lineAniThree;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+		}
+		@keyframes lineAniThree{
+			from{width: 0;}
+			to{width: 100%;}
+		}
+
+
+
+
+
+		.boxWrap:hover .line{animation-name: lineAni;}
+		.boxWrap:hover .line1{animation-name: lineAniOne;}
+		.boxWrap:hover .line2{animation-name: lineAniTwo;}
+		.boxWrap:hover .line3{animation-name: lineAniThree;}
+		/*원래 없던 (name)이름을 hover 입력하며 지정하면 hover 했을때에만 작동. */
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+
+	<div class="boxWrap">
+		<div class="line"></div>
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+</body>
+</html>
