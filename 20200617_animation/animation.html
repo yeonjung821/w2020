@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.boxWrap{
+			width: 500px;height: 500px;
+			background: #ff0;
+			position: relative;
+		}
+
+		.box1,.box2{
+			width: 10px;height: 10px;
+			position: absolute;
+			animation-duration: 4s;
+			animation-fill-mode: forwards;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+
+
+		.box1{
+			background: #f00;
+			animation-name: boxAni1;
+		}
+		@keyframes boxAni1{
+			0%{left: 0; top: 0;}
+			25%{left: 490px;top: 0;}
+			50%{left: 490px;top: 490px;}
+			75%{left: 0;top:490px;}
+			100%{left: 0;top: 0;}
+		}
+
+
+		.box2{
+			background: #00f;
+			animation-name: boxAni2;
+			animation-delay: 0.05s;
+		}
+		@keyframes boxAni2{
+			0%{left: 0;}
+			25%{left: 490px;top: 0;}
+			50%{left: 490px;top: 490px;}
+			75%{left: 0;top:490px;}
+			100%{left: 0;top: 0;}
+		}
+
+
+		.mouse{
+			position: absolute;
+			width: 20px;height: 35px;
+			border: 1px solid #000;
+			border-radius: 10px;
+			bottom: 20px;
+			left: 50%;
+			margin-left: -10px;
+			animation-name: mouse;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+		}
+
+		.mouse:after{
+			content:"";
+			display: block;width: 10px;height: 10px;
+			background: #000; border-radius: 5px;
+			margin: 5px auto;
+			}
+		@keyframes mouse{
+			0%{bottom: 20px;}
+			50%{bottom: 50px;}
+			100%{bottom: 20px;}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="mouse">
+			<div class="ball"></div>
+		</div>
+	</div>
+</body>
+</html>
