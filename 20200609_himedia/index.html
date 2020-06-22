@@ -3,93 +3,50 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title><a href=""#>HIMEDIA</a></title>
-	<style>
-		/*reset*/
-		*{margin: 0;padding: 0; box-sizing: border-box /*전체 선택자에 주면 따로 필요없음*/}
-		a:link,a:visited{color:#000;text-decoration:none;}
-		li{list-style:none;}
-
-		/*header*/
-		div.headerTop{
-			width: 980px;height: 75px;
-			
-			margin: 0 auto;
-		}
-
-		/*블럭단위 요소이기 때문에 ↓, 설정*/
-		div.headerTop>h1.logo{
-			text-align:center;
-			line-height:75px;
-			}
-		
-		div.gnbWrap{background-color: #1d5da4;}
-		div.gnbWrap>nav.gnbMenu{width: 980px; margin: 0 auto;}
-		div.gnbWrap>nav.gnbMenu>ul:after{
-			content:"";display:block; clear:both;}
-			/*인라인 테그이기 위해 dispaly값 추가. 
-			clear both는 float에만 적용.*/
-
-		div.gnbWrap>nav.gnbMenu>ul>li{float:left;width: 163.33px;box-sizing: border-box; border-right:1px solid #336dac;/*박스사이징.이거 해야 박스 안 벗어남*/ }
-		/*float:left 하려면 ul값에 after 설정해야함.*/
-		div.gnbWrap>nav.gnbMenu>ul>li>a{
-			color:white; display:block;
-			text-align: center; height: 45px;line-height:45px;
-			}
-
-		div.gnbWrap>nav.gnbMenu>ul>li:nth-child(1){border-left:1px solid #336dac;} 
-			/*위에선 border-right만 넣었으니 제일 첫 박스(회사소개)에 왼쪽 선 넣어서 닫아주기*/
-
-
-		div.gnbWrap>nav.gnbMenu>ul>li>a:hover{
-			background-color: #233e6f;
-		}
-
-
-			/*visualWrap*/
-		div.visualWrap{
-			height: 400px;
-			background-color: #233e6f;
-			background-image:url(image/visual_bg01.jpg);
-			background-repeat: no-repeat;
-			background-position: center;}
-
-		/*section*/
-		div.section{height: 195px;background-color: #eee;}
-		ul.card{width: 980px; margin: 0 auto;}
-		ul.card>:after{content:"";clear:both;display:block;}
-		ul.card>li{
-			float:left; width: 20% ;height: 195px;
-			text-align:center; color:white;
-			padding: 10px; }
-		ul.card>li:nth-child(1){background-color: #7c99b9;}
-		ul.card>li:nth-child(2){background-color: #4f74a1;}
-		ul.card>li:nth-child(3){background-color: #4b8ce0;}
-		ul.card>li:nth-child(4){background-color: #3db5f2;}
-		ul.card>li:nth-child(5){background-color: #95c8ff;}
-		ul.card>li>img{margin-top:15px;margin-bottom:15px;}
-		/*margin top은 오류가 많이나서 bottom을 쓰는 편이 좋음*/
-		ul.card>li>p{font-size:12px;}
-		ul.card>li>h3{margin-bottom:8px;}
-	</style>
+	<title>himedia</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="headerTop">
-		<h1 class="logo"><a href="#">HIMEDIA</a></h1>
+	<header class="header">
+		<div class="utilWrap">
+			<div class="util">
+				<!-- ul.utilMenu>li*4{menu} -->
+				<ul class="utilMenu clearfix">
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Join</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">English</a></li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div class="headerTop">
+			<h1 class="logo"><a href="#">HIMEDIA</a></h1>
+			<div class="toggle">
+				<div class="box1"></div>
+				<div class="box2"></div>
+				<div class="box3"></div>
+			</div>
+		</div>
+		<div class="gnbWrap"> 
+			<nav class="gnbMenu">
+				<ul>
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">제품소개</a></li>
+						<li><a href="#">사업영역</a></li>
+						<li><a href="#">고객센터</a></li>
+						<li><a href="#">사회공헌</a></li>
+						<li><a href="#">인재채용</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="visualWrap">
+		<div class="visual">
+			<img src="image/title01.png" alt="vTitle" class="vTitle">
+			<img src="image/light01.png" alt="light" class="light">
+		</div>
 	</div>
-	<div class="gnbWrap"> 
-		<nav class="gnbMenu">
-			<ul>
-					<li><a href="#">회사소개</a></li>
-					<li><a href="#">제품소개</a></li>
-					<li><a href="#">사업영역</a></li>
-					<li><a href="#">고객센터</a></li>
-					<li><a href="#">사회공헌</a></li>
-					<li><a href="#">인재채용</a></li>
-			</ul>
-		</nav>
-	</div>
-	<div class="visualWrap"></div>
 	<div class="section">
 		<ul class="card">
 			<li> <img src="image/icon01.png" alt="아이콘">
@@ -115,6 +72,88 @@
 			
 		</ul>
 	</div>
+
+	<div class="conWrapOne">
+		<ul class="card clearfix">
+			<li>
+				<img src="image/banner01.jpg" alt="이미지" class="cardImg">
+				<div class="cardBody">
+					<h3>회사개요</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</li>
+			<li>
+				<img src="image/banner02.jpg" alt="이미지" class="cardImg">
+				<div class="cardBody">
+					<h3>사업분야</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</li>
+			<li>
+				<img src="image/banner03.jpg" alt="이미지" class="cardImg">
+				<div class="cardBody">
+					<h3>환경경영</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				</div>
+			</li>
+			
+		</ul>
+	</div>
+	<div class="conWrapTwo">
+		<ul class="card clearfix">
+			<li>
+				<img src="image/banner_icon01.png" alt="">
+				<div class="card_body">
+					<h3>사보</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="image/banner_icon02.png" alt="">
+				<div class="card_body">
+					<h3>찾아오시는 길</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="image/banner_icon03.png" alt="">
+				<div class="card_body">
+					<h3>제품정보</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<footer id="footer">
+		<div class="footerTopWrap">
+			<div class="footerTop">
+				<!-- ul>li*3>a[#]>{menu} -->
+				<ul class="clearfix">
+					<li><a href="#">개인정보 취급방침</a></li>
+					<li><a href="#">이메일주소 무단 수집 거부</a></li>
+					<li><a href="#">패밀리 사이트</a></li>
+				</ul>
+				<div class="top"></div>
+			</div>
+		</div>
+		<div class="footerBottomWrap"> <!-- 980 -->
+			<div class="logo">하이미디어</div>
+			<div class="copy">
+				<p>하이미디어</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p>Lorem ipsum dolor.</p>
+				<p>copyright(C)2020. himedia All Right Reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+
+	
 </body>
 </html>
 

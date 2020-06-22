@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animate css</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+		body{
+			/*background: url(../images/pc01.jpg) ;*/
+		}
+		.box{
+			width: 500px;height: 130px;
+/*			position: absolute;
+			top: 50%;margin-top: -56px;
+			left: 50%;margin-left: -250px;*/
+			text-align: center;
+		}
+		.gap{height: 2000px;}
+		.wrap{padding: 50px 0;}
+		.container{width: 1000px;margin: 0 auto;}
+		.container ul li{
+			float:left;margin-right: 25px;width:231.25px;
+			height: 231.25px;background: orange;
+		}
+		.container ul li:last-child{margin-right: 0;}
+		.gray{background: #ddd;}
+		.cercle{border-radius: 120px !important;}
+	</style>
+</head>
+<body>
+	<div class="box animated bounce heartBeat">
+		<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
+	</div>
+	<div class="gap"></div>
+
+	<div class="wrap gray wow zoomIn">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="cercle wow zoomIn" data-wow-delay="0s">lorem</li>
+				<li class="cercle wow zoomIn" data-wow-delay="0.3s">loddm</li>
+				<li class="cercle wow zoomIn" data-wow-delay="0.5s">ddm</li>
+				<li class="cercle wow zoomIn" data-wow-delay="0.8s">dfgdd</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="wow bounceInLeft" data-wow-delay="1.1s">lorem</li>
+				<li class="wow bounceInUp" data-wow-delay="1.3s">loddm</li>
+				<li class="wow bounceInDown" data-wow-delay="1.5s">ddm</li>
+				<li class="wow bounceInRight" data-wow-delay="1.7s">dfgdd</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap gray wow zoomIn">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="wow pulse" data-wow-iteration="infinite" 
+				data-wow-delay="1.9s">lorem</li>
+				<li class="wow pulse" data-wow-iteration="infinite" 
+				data-wow-delay="2.1s">loddm</li>
+				<li class="wow pulse" data-wow-iteration="infinite" 
+				data-wow-delay="2.3s">ddm</li>
+				<li class="wow pulse" data-wow-iteration="infinite" 
+				data-wow-delay="2.5s">dfgdd</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
