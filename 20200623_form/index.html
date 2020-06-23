@@ -6,6 +6,20 @@
 	<title>문서 제목</title>
 </head>
 <body>
-	
+	<form action="welcome.php" method="get">
+		<fieldset>
+<!-- 			<legend>기본정보</legend>
+			<input type="checkbox" name="fav1" value="sc">축구
+			<input type="checkbox" name="fav2" value="sc">야구
+			<input type="checkbox" name="fav3" value="sc">줄다리기
+
+			<input type="radio" name="sex" value="male"> 남성
+			<input type="radio" name="sex" value="female"> 여성 -->
+			<!-- name (같게)지정해야 둘 중 하나 선택, 안그러면 둘 다 선택 가능해져버림 
+				name, value, id값 설정 중요.-->
+			<label for="na">이름</label>
+			<input type="text" name="name" value="">
+		</fieldset>
+	</form>
 </body>
 </html>
