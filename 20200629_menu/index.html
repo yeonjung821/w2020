@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		body{font-family: 'Noto Sans KR', sans-serif;}
+		
+		nav.gnb{width: 1000px;margin: 0 auto; background: pink;border-bottom: 1px solid #ddd; position: relative;z-index: 1;}
+		nav.gnb>ul{}
+		nav.gnb>ul>li{float: left;width: 200px;height: 40px;}
+		nav.gnb>ul>li>a{display: block;text-align: center;line-height: 40px;font-weight: bold;}
+		nav.gnb>ul>li:hover{background:hotpink;}
+		nav.gnb>ul>li:hover a{color: white;}
+		
+
+		nav.gnb>ul>li:hover .smenu{display: block;background: #0ff;}
+
+		.smenu{display:none;}
+		.smenu>li{text-align: center;line-height: 35px;}
+		.smenu>li:hover{background: #0ff;}
+
+
+		.visual{height: 400px;background: #ddd; }
+
+		.bx-wrapper {
+		    -moz-box-shadow: none;
+		    -webkit-box-shadow: none;
+		    box-shadow: none;
+		    border: 0 none;
+		}
+		
+
+		.visual li.vimg{height: 400px;}
+		.visual li.vimg img{position: absolute;width: 100%;}
+
+	</style>
+</head>
+<body>
+	<nav class="gnb">
+		<ul class="clearfix">
+			<li><a href="#">MENU1</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0101</a></li>
+					<li><a href="#">smenu0102</a></li>
+					<li><a href="#">smenu0103</a></li>
+					<li><a href="#">smenu0104</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU2</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0201</a></li>
+					<li><a href="#">smenu0202</a></li>
+					<li><a href="#">smenu0203</a></li>
+					<li><a href="#">smenu0204</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU3</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0301</a></li>
+					<li><a href="#">smenu0302</a></li>
+					<li><a href="#">smenu0303</a></li>
+					<li><a href="#">smenu0304</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU4</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0401</a></li>
+					<li><a href="#">smenu0402</a></li>
+					<li><a href="#">smenu0403</a></li>
+					<li><a href="#">smenu0404</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU5</a>
+				<ul class="smenu">
+					<li><a href="#">smenu0501</a></li>
+					<li><a href="#">smenu0502</a></li>
+					<li><a href="#">smenu0503</a></li>
+					<li><a href="#">smenu0504</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual">
+		<ul class="slider">
+			<li class="vimg"><img src="images/pc01.jpg" alt=""></li>
+			<li class="vimg"><img src="images/pc01.jpg" alt=""></li>
+			<li class="vimg"><img src="images/pc01.jpg" alt=""></li>
+		</ul>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({});
+		})
+	</script>
+</body>
+</html>
