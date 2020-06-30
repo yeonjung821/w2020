@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		div{
+			background-color: skyblue;
+			border: 1px solid #000;margin-bottom: 5px;
+		}
+		div.h1 + div.hi1{
+			background-color: #f00;
+		}
+		div.hi + div.han1{
+			background-color: #0f0;
+		}
+		div.h1 ~ div.hi1{
+			background-color: #00f;
+		}
+		div.h1 ~ div.han1{
+			background-color: pink;
+		}
+	</style>
+		
+</head>
+<body>
+	<div class="hi">test</div>
+	<div class="hi1 han1">test1</div>
+	<div class="hi1">test2</div>
+	<div class="hi1">test3</div>
+	<div class="hi1">test4</div>
+	<div class="hi1">test5</div>
+	<div class="hi1">test6</div>
+	<div class="hi1">test7</div>
+	<div class="hi1">test8</div>
+	<div class="hi1">test9</div>
+	<div class="hi1">test10</div>
+</body>
+</html>
