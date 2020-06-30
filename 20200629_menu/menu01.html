@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>sub menu</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		nav.gnb{width: 1200px;margin: 0 auto;background: pink;}
+		nav.gnb>ul{position: relative;}
+		nav.gnb>ul>li{float: left;width: 25%;}
+		nav.gnb>ul>li>a{display: block;text-align: center;line-height: 40px;}
+		nav.gnb>ul>li:hover{background: hotpink;}
+		nav.gnb>ul>li:hover .smenu{display: block;}
+		.header:hover .menubar{display: block;}
+
+		/*nav.gnb>ul>li:nth-child(1) .smenu{display: block;}*/
+		.smenu{position: absolute;left:0;display: none;
+			background:#f00;width: 100%;transition: 0.3s;opacity:0;
+		}
+		.smenu>li{float: left;}
+		.smenu>li>a{display: block;text-align: center;line-height:30px;width: 100px;}
+		
+		.menubar{width: 100%;height: 30px;background:pink;position: absolute;z-index:1;display: none;}
+
+		.visual{height: 400px;background:gray;position: relative;}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<nav class="gnb">
+			<!-- ul>li>a[#]>{MENU} -->
+			<ul class="clearfix">
+				<li><a href="#">MENU01</a>
+					<!-- ul.smenu>li>a[#]>{smenu} -->
+					<ul class="smenu clearfix">
+						<li><a href="#">smenu0101</a></li>
+						<li><a href="#">smenu0102</a></li>
+						<li><a href="#">smenu0103</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU02</a>
+					<ul class="smenu" style="padding-left: 300px;">
+						<li><a href="#">smenu0201</a></li>
+						<li><a href="#">smenu0202</a></li>
+						<li><a href="#">smenu0203</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU03</a>
+					<ul class="smenu" style="padding-left: 600px;">
+						<li><a href="#">smenu0301</a></li>
+						<li><a href="#">smenu0302</a></li>
+						<li><a href="#">smenu0303</a></li>
+					</ul>
+				</li>
+				<li><a href="#">MENU04</a>
+					<ul class="smenu" style="padding-right: 900px;">
+						<li><a href="#">smenu0401</a></li>
+						<li><a href="#">smenu0402</a></li>
+						<li><a href="#">smenu0403</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="menubar"></div>
+	</div>
+	<div class="visual"></div>
+</body>
+</html>
