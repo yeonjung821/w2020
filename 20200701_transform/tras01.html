@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transform</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.bgcolorOne{background:#ddd;}
+		.bgcolorTwo{background:#f00;}
+
+		.contents{width: 1200px;margin: 0 auto;padding:100px 0;}
+		.contents>ul{}
+		.contents>ul>li{
+			float: left;width:228px;margin-right: 15px;
+			position: relative;overflow: hidden;
+		}
+		.contents>ul>li:last-child{margin-right:0;}
+		.contents>ul>li>img{width: 100%;transition:0.3s;}
+		.contents>ul>li>div.bg{
+			position:absolute;
+			width: 100%;height: 100%;
+			background:rgba(0,0,0,0.3);transition:0.3s;
+		}
+		.contents>ul>li>div.bg>h3{
+			_background:#fff;width: 100px;line-height: 40px;
+			text-align: center;position: absolute;left: 50%;top: 50%;
+			transform:translate(-50%,-50%);color:white;
+		}
+		.contents>ul>li:hover div.bg{}
+		.contents>ul>li:hover div.bg.left{left:0;}
+		.contents>ul>li:hover div.bg.top{top:0;}
+		.contents>ul>li:hover div.bg.right{right:0;}
+		.contents>ul>li:hover div.bg.bottom{bottom:0;}
+		.contents>ul>li:hover div.bg.center{left: 50%;top: 50%;
+			transform:translate(-50%,-50%) scale(1);}
+		.contents>ul>li:hover img{transform:scale(1.2);}
+
+		.left{left:-100%;top:0;}
+		.top{top:100%;}
+		.right{right:-100%;top:0;}
+		.bottom{bottom:100%;}
+		.center{left: 50%;top: 50%;transform:translate(-50%,-50%) scale(1)}
+		.round{border-radius:50%;}
+	</style>
+</head>
+<body>
+	<div class="container bgcolorOne">
+		<div class="contents">
+			<ul class="clearfix">
+				<li class="round">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg left">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg top">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li class="round">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg bottom">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li class="round">
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg center round">
+						<h3>여행</h3>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="">
+					<div class="bg right">
+						<h3>여행</h3>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+<style>
+	.btn{
+		width: 200px;height: 40px;position: relative;
+	}
+	.btn>a{display: block;text-align: center;line-height:40px;}
+	.btn>.bar{
+		position: absolute;width: 0;height: 5px;background: #f00;bottom:0;
+		transition:0.3s;
+	}
+	.btn:hover .bar{width: 100%;}
+
+	.bRight{right: 0;}
+</style>
+
+	<div class="btn">
+		<a href="#">BUTTON</a>
+		<div class="bar"></div>
+	</div>
+
+	<div class="btn">
+		<a href="#">BUTTON</a>
+		<div class="bar bRight"></div>
+	</div>
+	<style>
+		.btn1{width: 200px;height: 40px;position: relative;}
+		.btn1>a{display: block;line-height:40px;text-align: center;}
+		.btn1>.bar1,.btn1>.bar2{
+			position: absolute;
+			height:5px;background: #f0f;
+			width: 100%;
+			transform:scaleX(0);
+			transition:0.3s;
+		}
+		.btn1>.bar1{bottom:0;}
+		.btn1>.bar1{top:0;}
+		.btn1:hover .bar1{transform:scaleX(1)}
+		.btn1:hover .bar2{transform:scaleX(1)}
+	</style>
+
+	<div class="btn1">
+		<a href="#">BUTTON</a>
+		<div class="bar2"></div>
+	</div>
+
+
+</body>
+</html>

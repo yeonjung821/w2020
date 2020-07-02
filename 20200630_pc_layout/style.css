@@ -20,7 +20,7 @@
 	/*main menu*/
 	#main_menu{position: absolute;bottom: 0;width: 100%;}
 	#main_menu>ul>li{float: left;width: 20%;border: 1px solid #000;
-		border-right:0 none;_transition:0.3s;}
+		border-right:0 none;transition:0.3s;}
 	#main_menu>ul>li:last-child{border-right: 1px solid #000;
 		border-radius:0 10px 10px 0;}
 	#main_menu>ul>li:first-child{border-radius:10px 0 0 10px;}
@@ -31,19 +31,18 @@
 #content{width: 960px;margin: 0 auto}
 	#main_section{width: 750px;float: left;}
 	#main_section>.main_article{padding: 20px;border: 1px solid #000;margin-bottom: 10px;}
-	#main_aside{width: 200px;height: 200px;float: right;_background:gray;}
+	#main_aside{width: 200px;height: 200px;float: right;}
 	#main_aside .buttons>label{
-		display: block;float: left;
-		width: 100px;height: 30px;line-height: 30px;
-		text-align: center;cursor: pointer;_background-color: pink;
-		border-radius: 10px 10px 0 0;
+		display: block;float: left;width: 100px;height: 30px;line-height:30px;
+		text-align: center;cursor:pointer;background-color:skyblue;
+		border-radius:10px 10px 0 0;
 	}
-
-	.inp:nth-child(1):checked ~ div.buttons > label:first-child{background-color: #f00;}
-	.inp:nth-child(2):checked ~ div.buttons > label:last-child{background-color: #f00;}
+	
+	.inp:nth-child(1):checked ~ div.buttons > label:first-child{background-color: #f00 !important;}
+	.inp:nth-child(2):checked ~ div.buttons > label:last-child{background-color: #f00 !important;}
 	/*input[type="radio"].inp:nth-child(1)*/
 
-	.inp:nth-child(1), .inp:nth-child(2){display: none;}
+	.inp:nth-child(1),.inp:nth-child(2){display: none;}
 	.inp:nth-child(1):checked ~ div.tab_items1{display: block;}
 	.inp:nth-child(1) ~ div.tab_items1{display: none;}
 
@@ -57,12 +56,12 @@
 	.thumbnail{float: left;}
 	.des{float: left;margin-left:10px;}
 	.des > strong{
-		width: 120px;display: block;
+		width: 120px;
+		display: block;
 		white-space:nowrap;
 		text-overflow:ellipsis;
 		overflow:hidden;
 	}
-
 
 
 /*footer*/
