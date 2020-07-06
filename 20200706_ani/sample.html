@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>search</title>
+	<style>
+		*{padding: 0;margin: 0;box-sizing: border-box;}
+		body{background-image: url(images/bg01.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.searchInp{width: 400px;height: 50px;
+			border: 3px solid #000;
+			border-radius: 25px;
+		}
+		.searchBtn{width: 20px;height: 20px;
+			background-image: url(images/search.jpg);
+			text-indent: 09999px; border: 0 none;
+		}
+		.searchTitle{
+			/*inline 테그라 text-indent 적용안돼서 블럭단위로 바꿔줘야함*/
+			display: block;
+			width: 60px;height: 20px;
+			background-image: url(images/searchtext.jpg);
+			text-indent: -9999px;
+			position: absolute;top: 15px;
+		}
+		.wrap{
+			position: absolute;
+			background: #000; width: 400px;height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<form action="#" mothod="get">
+			<label for="searchTxt" class="searchTitle">searchtitle</label>
+			<input type="text" id="searchTxt" name="search" placeholder="검색어를 입력하세요." class="searchInp">
+			<button type="submit" class="searchBtn">search</button>
+		</form>
+	</div>
+</body>
+</html>
