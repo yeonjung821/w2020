@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>for</title>
+<script>
+	var num;
+	var st = "ABCDEFG";
+	document.write("st의 개수는"+st.length);
+
+	for(num=1;num<=st.length;num++){
+		document.write("<div class=\"box\">"+num+"</div>");
+	}
+
+	document.write("<div>");
+	// var x;
+	// for(x=1;x<=10;x++){
+	// 	document.write("2 x "+ x + " = " + (2*x)+"<br>");
+	// } -아래로 보냄.
+	
+	document.write("</div>");
+
+</script>
+<style>
+	.box{width: 100px;height: 100px;display: inline-block;}
+	.box:nth-child(2n){background: coral;}
+
+	.box1{display:inline-block;width:150px}
+
+</style>
+</head>
+<body>
+	<div>
+		<script>
+			var x;
+			for(x=1;x<=10;x++){
+				document.write("2 x "+ x + " = " + (2*x)+"<br>");
+			}
+		</script>
+		<!-- <script>
+			var x;
+			for(x=1;x<=10;x++){
+				document.write("3 x "+ x + " = " + (3*x)+"<br>");
+			}
+		</script> -->
+		<script>
+			var x,y;
+			for(x=1;x<=9;x++){
+				document.write("<div class=\"box1\">") // 50번 (이)줄은 57번 줄과 함께.
+				// 위와 같이 한 후 style sheet를 만들거나 아래(52번 줄)처럼 넣어도 됨. 
+				// document.write("<div style=\"display:inline-block;width:150px;\"></div>")//
+				document.write(x+"단 입니다.<br>");
+				for(y=1;y<=9;y++){
+					document.write(x+"x"+y+"="+(x*y)+"<br>");
+				}
+				document.write("</div>")
+			}
+		</script>
+	</div>
+	
+</body>
+</html>

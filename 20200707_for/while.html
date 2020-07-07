@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>while</title>
+</head>
+<body>
+	<script>
+		var sum =0;
+		for(var i=1;i<=10;i++){
+			sum = sum + i;
+			// sum = sum + i; 랑sum+=i; 같음.
+		}
+		document.write(sum);
+	</script>
+ <!-- 위와 아래 같음. 위는 for, 아래는 while. 보통 for 많이 씀. -->
+	<script>
+		var sum = 0;
+		var x=1;
+		while(x<=10){
+			sum = sum + x;
+			x++;
+		}
+		document.write(sum);
+	</script>
+	
+</body>
+</html>
