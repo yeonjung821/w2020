@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>media</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*ul>li{float: left;width: 16.66%;}*/
+		ul>li{}
+		ul>li img{width: 100%;}
+
+		@media screen and (max-width:576px){  //*mobile*/
+			ul<li{float: left;width: 50%;}
+		}
+		@media screen and (min-width: 577px;) and (max-width: 922px;){  /*pc*/
+			ul<li{float: left;width: 33.3333333%;}
+		}
+		}
+		@media screen and (min-width:923px;){
+			ul<li{float: left;width: 20%;}
+			.blind{display: none;}
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<ul class="clearfix">
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+		<li><img src="../images/testimg.jpg" alt=""></li>
+	</ul>
+<style>
+	.box{width: 200px;height: 400px;background: skyblue;}
+	.box img{_max-width: 100%;}
+</style>
+
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+	</div>
+	
+</body>
+</html>
