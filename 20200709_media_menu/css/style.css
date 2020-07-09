@@ -1,19 +1,26 @@
-@charset "uft-8";
+@charset "utf-8";
 .topNav{background-color: #333;}
-.topNav a{display: block;color: white;float: left;padding: 14px 16px;}
+.topNav a{display: block;color:white;float: left;padding:14px 16px;}
 .topNav a.icon{float: right;}
 .topNav a.icon{display: none;}
 
-
-@media screen and (max-width: 576px){ /*mobile*/
-	.topNav a:not(:first-child){display: none;}
-	.topNav a.icon{display: none;}
-}  
-
-@media screen and (min-width: 577px;) and (max-width: 922px;){ /*tablet*/
-
+@media screen and (max-width:576px){ /*mobile*/
+	/*.topNav a:not(:first-child){display:none;}*/
+	.menuWrap{position: fixed;width: 100%;}
+	.topNav a{display: none;}
+	.topNav a:first-child{display: block;}
+	.topNav a.icon{display: block;}
+	.topNav.responsive a{float: none;display: block;}
+	.topNav.responsive a.icon{position: absolute;right: 0;top: 0;}
+}
+@media screen and (min-width:577px) and (max-width:922px){/*tablet*/
+	.menuWrap{width: 100%;}
 }
 
-@media screen and (min-width: 923px;){ /*pc*/
 
+@media screen and (min-width: 923px){ /*pc*/
+	.menuWrap{
+		width: 1200px;position: fixed;
+		left: 50%;transform: translateX(-50%);top: 20px;
+	}
 }
