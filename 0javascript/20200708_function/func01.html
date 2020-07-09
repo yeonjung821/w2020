@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>function</title>
+	<!-- <script>
+		function 함수명(){
+			실행문
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<script>
+			함수명();
+		</script>
+	</div>
+</body>
+</html> -->
+<script>
+		function gugudan(x){
+			// var x = 2;
+			document.write(x + " x 1 = " + x*1 + "<br>");
+			document.write(x + " x 2 = " + x*2 + "<br>");
+			document.write(x + " x 3 = " + x*3 + "<br>");
+			document.write(x + " x 4 = " + x*4 + "<br>");
+			document.write(x + " x 5 = " + x*5 + "<br>");
+			document.write(x + " x 6 = " + x*6 + "<br>");
+			document.write(x + " x 7 = " + x*7 + "<br>");
+			document.write(x + " x 8 = " + x*8 + "<br>");
+			document.write(x + " x 9 = " + x*9 + "<br>");
+			for(var i=1;i<=9;i++){
+				document.write(x + "x" + i + "=" + x*i + "<br>")
+			}
+		}
+	</script>
+</head>
+<body>
+	<!-- <div class="box">
+		<script>
+			gugudan(5);
+		</script>
+	</div> -->
+	<button type="button" onclick="gugudan(5)">구구단 5단</button>
+	<div onclick="gugudan(4)">구구단 4단</div>
+	<a href="#" onclick="gugudan(3)">구구단 3당</a>
+</body>
+</html>
