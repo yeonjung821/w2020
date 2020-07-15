@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>array03</title>
+</head>
+<body>
+	<script>
+		var com = [95,88,,72,68,,69,82,78,87];
+
+		function printArr(){
+			var sum = 0;
+			var n = com.length; // com 개수
+			var count = 0; //입력점수 카운터 변수
+
+			for(var i=0;i<n;i++){
+				if(com[i]==undefined){
+					continue;
+				}else{
+					sum = sum + com[i]; //sum += com[i]
+					count++; //count = count + 1;
+				}
+			}
+			return (sum/count);
+
+		}
+		var getAvg = printArr();
+		document.write(getAvg); // NaN - not a number
+	</script>
+</body>
+</html>

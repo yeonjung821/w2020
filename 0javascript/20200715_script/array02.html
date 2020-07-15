@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<script>
+		var com = [95,88,10,72,68,10,99,82,78,85];
+
+		function pringAvg(){
+			var sum = 0; //지역변수
+			//var n = com.length;
+
+			for(var i=0;i<com.length;i++){
+				sum = sum + com[i];
+				//sum += com[i]
+			}
+			return (sum/com.length);
+		}
+
+		var getAvg = pringAvg();
+		document.write(getAvg);
+	</script>
+</body>
+</html>

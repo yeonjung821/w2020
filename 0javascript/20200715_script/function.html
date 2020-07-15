@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<script>
+		var sum = 0;
+		function add(a,b){
+			// var a = 10;
+			// var b = 20;
+			sum = a + b;
+			document.write(sum);
+		}
+
+	</script>
+	<button onclick="add(10,20)">버튼</button>
+	<a href="#" onclick="add(20,30)">버튼1</a>
+	<div onclick="add(40,50)">box</div>
+</body>
+</html>
