@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<div id="carname"></div>
+	<div id="carcolor"></div>
+	<div id="carspeed"></div>
+	<script>
+		var car = {
+			name:"sonata",
+			speed:50,
+			color:"white",
+			start:function(){
+				return this.speed + 10; //여기서 this는 선언한 객체 자기 자신 
+			}
+		}
+		document.getElementById("carname").innerHTML = car.name;
+		document.getElementById("carcolor").innerHTML = car.color;
+		document.getElementById("carspeed").innerHTML = car.start();
+	</script>
+</body>
+</html>

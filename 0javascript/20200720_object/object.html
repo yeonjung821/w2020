@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object</title>
+	<style>
+		#var1{}
+	</style>
+</head>
+<body>
+	<div id="var1"></div>		
+	<div id="var2"></div>
+	<script>
+		var car = ["sonate","100km","white",4];
+		document.write("자동차의 이름 : " + car[0]+"<br>")
+
+		var carOne = { //object define(선언)
+			name:"avante", //속성
+			speed:200 ,
+			color:"red",
+			start:function(){  //method
+				return this.speed+150;
+			}
+		}
+		document.write("자동차의 이름 : "+carOne.name+"<br>");
+		document.write("자동차의 속도 : "+carOne.start()+"<br>");
+		document.write(carOne["color"]+"<br>"); //=carOne.color
+		document.getElementById("varl").innerHTML = "<h3>자동차 이름 : "+carOne.name+"</h3>"; //object display-
+		document.getElementById("var2").innerHTML = carOne.start();
+	</script>
+</body>
+</html>

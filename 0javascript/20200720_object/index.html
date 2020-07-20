@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<script> //forEach 배열 아주 중요해용.
+		var kdata=["서울","부산","청주","대구"];
+
+		kdata.forEach(printArr);
+		function printArr(item,index){ //ptintArr=함수
+			document.write(index+1+". "+item+"<br>");
+		}
+
+
+		function printArrOne(){
+			for(var i=0;i<kdata.length;i++){
+				var num = i+1;
+				document.write(num+". "+kdata[i]+"<br>");
+			}
+		}
+		printArrOne(); //함수 실행 안하면 18~22줄을 적어도 페이지에 실행되지 않음. 왼쪽이 함수 실행한다는 의미.
+
+
+
+		var data = [10,20,30,40,50,60,70,80,90,100];
+
+		document.write(data+"<br>");
+		document.write(data.indexOf(30)+"<br>"); //페이지에 2로 실행되는 것은. index를 나타내는것. var data의 10,20,30--중 10이 0번째이기 때문에 30이 2로 나타남.
+		document.write(data.lastIndexOf(30)+"<br>");
+		document.write(data.indexOf(30,3)+"<br>"); // index 값 0,1,2,3 다음의 나오는 수를 나타냄 = 4
+		document.write(data.indexOf(300)+"<br>");  //값이 -1 = data가 없다. 라는 뜻
+	</script>
+</body>
+</html>
