@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout잡기</title>
+	<style>
+		*{padding: 0;margin: 0;} /**<tag name<class<id<inline style<!important--우선순위*/
+		div.wrap{width: 980px;margin: auto;background: skyblue;text-align: center;}
+		#header:after{content: "";display: block;clear: both;}
+		#header > h1{width: 200px;line-height: 60px;float: left;background: #f00;} /*text-align: initial; -----우선순위(부모자) 있어도 상속받지 않겠다는 의미.>>만약 tac(center)정렬 하기 싫을때에 사용.*/
+		#header > #nav{width: 780px;line-height: 60px;float: left;background: #ff0;}
+
+		.visual{background: #0ff;height: 400px;line-height: 400px;} /*아무런 값을 설정하지 않고 색상만 넣었는데도 크기가 설정된다. 왜냐하면block단위 요소라서 자기 자신 말고 부모의 크기에 따라 알아서 설정됨.*/
+	</style>
+</head>
+<body>
+		<!-- float와 position으로 레이아웃 잡기 -->
+	<div class="wrap"> <!-- 가장 큰 바깥쪽 틀 부분 -->
+		<header id="header"><!-- logo와 menu가 있는 곳. 둘을 분리해선 안됨. -->
+			<h1>logo</h1>
+			<nav id="nav">menu</nav>
+		</header> 
+		<div class="visual">이미지 슬라이드 넣는 곳</div>
+		<section id="section">
+			<artical id="artical">공지사항(기사)</artical>
+			<div id="gallery">갤러리</div>
+			<div id="popup">팝업</div>
+		</section>
+		<footer id="footer">
+			<address>Lorem ipsum dolor sit amet.</address> <!-- 주소 쓸 때 사용. -->
+		</footer>
+	</div>
+	<!--큰 네모 안에 중간 네모 네개.
+		wrap 안에 header/visual(slide)section/footer -->
+
+	<!-- 중간 네모 안에 작은 네모들. 
+		header 안에 h1(logo)/nav(menu)...등-->
+</body>
+</html>
