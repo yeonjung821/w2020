@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom</title>
+</head>
+<body>
+	<p id="firstP" style="color: blue;background: yellow;"
+	onclick="this.style.color='teal'"> <!-- onclick에는 테그 들어감. -->
+		이것은 <span style="color: red"> 문장</span>입니다.
+	</p>
+	<script>
+		var p = document.getElementById("firstP");
+	</script>
+
+
+	<script>
+		function change(){
+			p.style.color = "white";
+			p.style.fontSize = "2em"
+			p.style.border = "3px solid #f00"
+		}
+		function reset(){
+			p.style.color = "blue";
+			p.style.fontSize = "1em";
+			p.style.border = "none";
+		}
+	</script>
+
+
+	<button type="button" onclick="change()">스타일변경</button>
+	<button type="button" onclick="reset()">원래대로</button>
+</body>
+</html>
