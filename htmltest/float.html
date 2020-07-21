@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		h3{float: left;}
+	</style>
+</head>
+<body>
+	<h3 style="background: skyblue; width: 600px; height: 100px;">logo</h3>
+	<h3 style="background: skyblue; width: 600px; height: 100px;float: right;">logo</h3>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque necessitatibus dolorum reiciendis rerum dolores quod suscipit, assumenda corporis animi placeat. Explicabo harum, blanditiis voluptas quibusdam voluptatibus magni! Commodi itaque quasi a nostrum enim repellat expedita dolore similique rem voluptatibus nesciunt quisquam explicabo, in non suscipit dolores hic, quis soluta recusandae modi sunt maxime? Quasi tempore obcaecati, quo fuga optio similique dolores nobis eius eveniet maiores aspernatur esse sit deserunt officiis numquam rem, facilis asperiores nesciunt? Cumque laboriosam nam, sit qui assumenda earum, deserunt accusantium doloribus, quas cum sunt, omnis consequatur distinctio. A tempora odit beatae? Nostrum deleniti error non, sit.
+
+
+
+	<style>
+			.boxWrap{width: 500px;_height: 200px;background: skyblue;}
+			.box01{background: red;width: 200px;float: left;height: 100px;}
+			.box02{background: teal;width: 200px;float: left;height: 100px;}
+			.clearboth{clear: both;background: blue;}
+			/*.boxWrap:after{content:"";clear: both;display: block;}*/
+			.clearfix:after{content:"";clear: both;display: block;}
+			/*boxWrap:before{content:"안녕하세요";*/
+	</style>
+
+	<div class="boxWrap clearfix">
+		<!-- before의 자리 -->
+		<div class="box01">1</div>
+		<div class="box02">2</div>
+		<!-- <div class="clearboth">3</div> -->
+		<!-- after의 자리 -->
+		
+	</div>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum tempore, quod, repellat porro dolore obcaecati quos pariatur tenetur, nobis eveniet aspernatur reiciendis aperiam ipsum nam magnam adipisci illo laborum hic.
+</body>
+</html>
+
+<!-- clear: both = clear:left와 clear:right를 한번에 쓰는것. -->
