@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom2</title>
+</head>
+<body>
+	Lorem ipsum dolor sit <span class="text">amet</span>, consectetur adipisicing elit. <span class="text">Dolorem</span> nobis eligendi accusamus quis fugit placeat <span>cupiditate</span> sequi ab, <span>quidem</span> hic.
+	<div onclick="change()">태그변경</div>
+	<div onclick="cChange()">클래스변경</div>
+	<div onclick="reset()">초기값</div>
+	<script>
+		
+		function change(){
+			var span = document.getElementsByTagName("span");
+			console.log(span.length);
+			//span[0].style.color = "red";
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="red";
+				span[i].style.fontWeight = "bold";
+			}
+		}
+		function cChange(){
+			var span = document.getElementsByClassName("text");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="orchid";
+				span[i].style.fontWeight = "bold";
+			}
+		}
+		//change();
+
+		function reset(){
+			var span = document.getElementsByTagName("text , span");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="black";
+				span[i].style.fontWeight="light"
+			}
+		}
+	</script>
+</body>
+</html>
