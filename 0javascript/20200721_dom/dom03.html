@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom</title>
+	<script>
+		// var span = document.getElementsByTagName("span");
+		function change(){
+			var span = document.getElementsByTagName("span"); //get은 가져오는거 set은 반영하는거.
+			for(var i=0;i<4;i++){  //i<4의 4는 span의 length(갯수)
+				span[i].style.color = "blue";
+				span[i].style.fontSize = "2em";
+				span[i].style.fontWeight = "bold";
+				// document.getElementsByTagName("span")[i].style.color = "blue";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>
+		내가 좋아하는 과일
+		<button type="button" onclick="change()">누르시오</button>
+	</h3>
+	Lorem ipsum dolor sit <span>사과</span>amet, consectetur adipisicing elit. <span>자두</span>Laborum itaque commodi, ullam et maxime autem iste ratione neque <span>바나나</span>libero porro perferendis vero possimus cumque labore <span>복숭아</span>distinctio excepturi quis, odio illo!
+</body>
+</html>

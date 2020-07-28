@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>event</title>
+</head>
+<body>
+	<p 
+	onmouseover="this.style.background='orchid'" 
+	onmouseout="this.style.background='white'">
+	마우스오버</p>
+
+
+	<div class="myDiv">
+		마우스오버1
+	</div>
+	<div class="myDiv">
+		마우스오버2
+	</div>
+
+	<script>
+		var myDiv	= document.getElementsByClassName("myDiv")[0];
+		myDiv.onmouseover = function(){ //리스너를 무명함수로 작성
+			this.style.background='orchid'
+		};
+		myDiv.onmouseout = function(){
+			this.style.background='white'
+		}
+
+		var myDiv2 = document.getElementsByClassName("myDiv")[1];
+		myDiv2.onmouseover = over;
+		myDiv2.onmouseout = out;
+
+		function over(){
+			myDiv2.style.background='red';
+		};
+		function out(){
+			myDiv2.style.background='white';
+		};
+
+
+
+		//myDiv.onmouseover = over; //리스너를 함수로 작성
+		//function over(){};
+	</script>
+</body>
+</html>

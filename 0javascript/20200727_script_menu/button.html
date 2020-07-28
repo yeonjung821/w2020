@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function change(){
+			var text = document.getElementById("text");
+			text.style.color = "red";
+			text.style.background = "gray";
+			alert("안녕하세요.\n \t 저는 \'홍길동\'입니다.");
+			document.getElementsByTagName("body")[0].style.background = "skyblue";
+		}
+		function reset(){
+			var text = document.getElementById("text");
+			text.style.color = "initial";
+			text.style.background = "initial";
+		}
+	</script>
+</head>
+<body>
+	<p id="text">안녕하세요</p>
+	<button type="button" onclick="change()">버튼1</button>
+	<button type="button" onclick="reset()">버튼1</button>
+</body>
+</html>

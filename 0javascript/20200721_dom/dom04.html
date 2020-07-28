@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom</title>
+	<style>
+		#myDiv{
+			width: 100px;height: 100px;
+			background:skyblue;
+		}
+	</style>
+
+	<script>
+		function createDiv(){
+			var obj = document.getElementsByTagName("body")[0];
+			var newDiv = document.createElement("div");
+			newDiv.innerHTML = "안녕하세요";
+			newDiv.setAttribute("id","myDiv");
+			newDiv.style.background = "skyblue";
+			newDiv.onclick = function(){
+				var p = newDiv.parentElement;
+				p.removeChild(newDiv);
+			};
+
+			obj.appendChild(newDiv);
+		}
+		
+	</script>
+</head>
+<body>
+	<div>장연정</div>
+	<button type="button" onclick="createDiv()">div생성</button>
+</body>
+</html>
