@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slick</title>
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slick").slick({
+				dots:true,
+				autoplay:true,
+				slidesToShow:5,
+				responsive:[{
+					breakpoint:960,
+					settings:{
+						arrows:false,
+						//centerMode:true,
+						slidesToShow:3
+					}
+				},
+				{
+					breakpoint:560,
+					settings:{
+						arrows:false,
+						//centerMode:true,
+						slidesToShow:1
+					}
+				}
+				]
+			});
+		});
+	</script>
+	<style>
+		body{background: coral;}
+		.container{width: 1000px;margin: auto;}
+		.container .slick{}
+		.container .slick img{width: 95%;display: block;margin: 0 auto;} /*img크기를 꽉 채워 빈틈 없도록 width:100%에 가깝게*/
+		/*.slick div{padding: 0 10px;} - 이건 의미 없음*/
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="slick">
+			<!-- div*7>img[../images/thumb$.jpg] -->
+			<div><img src="../images/thumb1.jpg" alt=""></div>
+			<div><img src="../images/thumb2.jpg" alt=""></div>
+			<div><img src="../images/thumb3.jpg" alt=""></div>
+			<div><img src="../images/thumb4.jpg" alt=""></div>
+			<div><img src="../images/thumb5.jpg" alt=""></div>
+			<div><img src="../images/thumb6.jpg" alt=""></div>
+			<div><img src="../images/thumb7.jpg" alt=""></div>
+		</div>
+	</div><!-- 이 레이아웃 구조만 잇으면 슬라이드 만들 수 있음. slick이 bxslider보다 반응형에 맞음 -->
+</body>
+</html>
