@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>gallery</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+		.sliderWrap{width: 1000px;margin: 0 auto;background-color:#444;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var slider = $(".slider").bxSlider({
+				  //pager:false,            // 현재 위치 페이징 표시 여부 설정.
+			      moveSlides:2,         // 슬라이드 이동시 갯수 설정.
+			      slideWidth:192,        // 슬라이드 마다 너비 설정.
+			      minSlides:5,           // 최소 노출 개수를 설정합니다.
+			      maxSlides:5,          // 최대 노출 개수를 설정합니다.
+			      slideMargin:10,      // 슬라이드간의 간격을 설정합니다.
+			      auto:true,             // 자동으로 흐를지 설정합니다.
+			      autoHover:true    // 마우스 오버시 정시킬지 설정합니다.
+
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li><img src="images/pic_1.jpg" alt=""></li>
+			<li><img src="images/pic_2.jpg" alt=""></li>
+			<li><img src="images/pic_3.jpg" alt=""></li>
+			<li><img src="images/pic_4.jpg" alt=""></li>
+			<li><img src="images/pic_5.jpg" alt=""></li>
+			<li><img src="images/pic_6.jpg" alt=""></li>
+			<li><img src="images/pic_7.jpg" alt=""></li>
+			<li><img src="images/pic_8.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

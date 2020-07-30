@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				slideWidth:190,
+				slideMargin:10,
+				maxSlides:5,
+				moveSlider:2,
+				auto:true
+
+
+			});
+		});
+	</script>
+	<style>
+		.wrapper{width: 1000px;margin:auto;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="slider">
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+			<li><img src="../images/testimg.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

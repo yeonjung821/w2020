@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>tab</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		var viewImg = [
+			"../images/spring.jpg",
+			"../images/summer.jpg",
+			"../images/fall.jpg",
+			"../images/winter.jpg"
+			];
+
+		$(document).ready(function(){
+			$(".wrapper>ul>li").click(function(){
+				var liNum = $(this).index();
+				$(".image>img").attr("src",viewImg[liNum]);
+				
+			});
+		});
+	</script>
+	<style>
+		.wrapper{width: 522px;margin:auto;}
+		.wrapper li{float: left;width: 123px;margin-right:10px;}
+		.wrapper li:last-child{margin-right:0;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="clearfix">
+			<li><img src="../images/btn1_1.jpg" alt="봄"></li>
+			<li><img src="../images/btn2_1.jpg" alt="봄"></li>
+			<li><img src="../images/btn3_1.jpg" alt="봄"></li>
+			<li><img src="../images/btn4_1.jpg" alt="봄"></li>
+		</ul>
+		<div class="image">
+			<img src="../images/spring.jpg" alt="">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({auto:true,mode:"fade"});
+			$(".sliderOne").bxSlider();
+		});
+	</script>
+	<style>
+		div.sliderWrap{}
+		ul.slider>li>img{width: 100%;}
+		div.wrap{background-color:skyblue;}
+		div.sliderOneWrap{width: 1200px;margin:auto;}
+
+		.bx-wrapper {
+     -moz-box-shadow:none;
+     -webkit-box-shadow:none; 
+     box-shadow:none; 
+     border: 0 none; 
+     margin-bottom:0;
+		}
+		.bx-wrapper .bx-pager{
+    	bottom: 30px;
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a.active{
+   		 background: #FFF;
+		}
+		.contents{height: 400px;background-color:orange;}
+	</style>
+</head>
+<body>
+	<!-- ul.slider>li*3>img[images/pc0$.jpg][alt="img$"] -->
+	<div class="sliderWrap">
+		<ul class="slider">
+			<li><img src="images/pc01.jpg" alt=""></li>
+			<li><img src="images/pc02.jpg" alt=""></li>
+			<li><img src="images/pc03.jpg" alt=""></li>
+		</ul>
+	</div>
+
+	<div class="wrap">
+		<div class="sliderOneWrap">
+			<div class="sliderOne">
+				<div><img src="images/pc01.jpg" alt=""></div>
+				<div><img src="images/pc02.jpg" alt=""></div>
+				<div><img src="images/pc03.jpg" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<div class="contents"></div>
+</body>
+</html>

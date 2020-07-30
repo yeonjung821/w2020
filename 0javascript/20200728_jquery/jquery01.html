@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		ul>li{
+			float: left;width: 100px;
+			background:skyblue;
+			line-height:40px;text-align: center;
+			margin-right:10px;
+		}
+		.boxWrap{
+			width: 350px;border: 1px solid #000;
+			padding:20px;
+		}
+		.boxWrap .box2,
+		.boxWrap .box3{display: none;}
+		.active{background: #f00;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			// $("ul>li").eq(0).click(function(){
+			// 	$(".boxWrap>div").hide().eq(0).show();
+			// });
+			// $("ul>li").eq(1).click(function(){
+			// 	$(".boxWrap>div").hide().eq(1).show();
+			// });
+			// $("ul>li").eq(2).click(function(){
+			// 	$(".boxWrap>div").hide().eq(2).show();
+			// });
+
+			// $("ul>li").click(function(){
+			// 	var liNum = $(this).index();
+			// 	$("ul>li").removeClass().eq(liNum).addClass("active");
+			// 	$(".boxWrap>div").hide().eq(liNum).show();
+			// });
+			$("ul>li").click(function(){
+				var liNum = $(this).index();
+				$("ul>li").removeClass();
+				$(this).addClass("active");
+				$(".boxWrap>div").hide();
+				$(".boxWrap>div").eq(liNum).fadeIn();
+			});
+
+
+
+		});
+		
+	</script>
+</head>
+<body>
+	<ul class="clearfix">
+		<li class="active">menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+	<div class="boxWrap">
+		<div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur numquam mollitia illum. Dolor, tempore ipsum soluta, repellat unde officia ut?</div>
+		<div class="box2">2. Fuga esse eos assumenda nisi sunt eveniet vitae voluptas, nobis dicta, corporis praesentium reprehenderit ratione, dolor dolores fugiat, numquam asperiores!</div>
+		<div class="box3">3. Recusandae deserunt quo harum quaerat dolores ad corporis magnam, saepe repudiandae accusantium perferendis, inventore, dolor, iure sint veniam quis repellendus.</div>
+	</div>
+	
+</body>
+</html>
