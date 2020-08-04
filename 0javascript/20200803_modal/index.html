@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>modal</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		ul>li{float: left;}
+		#glayLayer{position: fixed;;width: 100%;height: 100%;background: #000;opacity: 0.6;top: 0;left: 0;display: none;}  /*항상 포지션을 주더라도 위치값 줘야함. top,left 등*/
+		#overLayer{
+			position: fixed;top: 50%;left: 50%;transform: translate(-50%,-50%);display: none;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$("body").append("<div id='glayLayer'></div><div id='overLayer'></div>");  //ul 뒤에 div를 넣어 가상의 레이어를 만드는 것. (사진 레이어 + 배경 레이어 = 총 두개의 레이어로 구성 하려고) glay-배경/ over-사진
+
+			$("a.modal").click(function(e){  //ul>li>a = modal 을 클릭했을때에 벌어지는 일.
+				var aHref = $(this).attr("href");
+				$("#glayLayer").show();
+				$("#overLayer").show().html("<img src='"+ aHref+"'>");
+				return false;
+				//e.preventDefault();
+			}); 
+			$("#glayLayer,#overLayer").click(function(){
+				$("#glayLayer").hide();
+				$("#overLayer").hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- ul>li*6>a[../images/tourgallery_j$a.jpg]>img[../images/tourgallery_j1.jpg] -->
+	<ul>
+		<li><a href="../images/tourgallery_j1a.jpg" class="modal"><img src="../images/tourgallery_j1.jpg" alt=""></a></li>
+		<li><a href="../images/tourgallery_j2a.jpg" class="modal"><img src="../images/tourgallery_j2.jpg" alt=""></a></li>
+		<li><a href="../images/tourgallery_j3a.jpg" class="modal"><img src="../images/tourgallery_j3.jpg" alt=""></a></li>
+		<li><a href="../images/tourgallery_j4a.jpg" class="modal"><img src="../images/tourgallery_j4.jpg" alt=""></a></li>
+		<li><a href="../images/tourgallery_j5a.jpg" class="modal"><img src="../images/tourgallery_j5.jpg" alt=""></a></li>
+		<li><a href="../images/tourgallery_j6a.jpg" class="modal"><img src="../images/tourgallery_j6.jpg" alt=""></a></li>
+	</ul>
+</body>
+</html>
