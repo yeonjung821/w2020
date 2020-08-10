@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>car</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		#panel{
+			width: 600px;height: 300px;
+			border: 1px solid #000;
+			margin:auto;position: relative;
+		}
+		.bar{
+			width: 500px;height: 20px;
+			background: #f00;
+			position: absolute;
+			left: 50px;top: 190px;
+		}
+		#car{
+			position: absolute;left:50px;
+			top:120px;
+		}
+		.rotate{transform:rotateY(180deg)}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var objBar = $(".bar");
+			var objCar = $("#car");
+			var nStart = objBar.position().left;
+			var nEnd = nStart + objBar.width() - objCar.width();
+			var nStep = 2;
+			var nCurrent = nStart;
+			var nTimerId = 0;
+
+			function carMove(){
+				nCurrent = nCurrent + nStep;
+				//console.log(nCurrent);
+				if(nCurrent>nEnd){
+					nStep = -2;
+					objCar.addClass("rotate");
+				}
+				if(nCurrent<nStart){
+					nStep = 2;
+					objCar.removeClass("rotate");
+				}
+
+				objCar.css("left",nCurrent);
+			}
+
+			//setInterval(carMove,30);
+
+			$(".btn_start").click(function(){
+				if(nTimerId == 0){
+					nTimerId = setInterval(carMove,30);
+					alert("자동차가 움직입니다.");
+				}
+				console.log(nTimerId);
+			});
+			$(".btn_stop").click(function(){
+				if(nTimerId != 0){
+					clearInterval(nTimerId);
+					nTimerId = 0;
+				}
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="panel">
+		<div class="bar"></div>
+		<div id="car"><img src="../../images/car.png" alt=""></div>
+	</div>
+	<button class="btn_start">시작</button>
+	<button class="btn_stop">정지</button>
+</body>
+</html>

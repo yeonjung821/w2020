@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>setinterval</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<button type="button" onclick="setBtn()">클릭</button>
+	<script>
+		function setBtn(){
+			setInterval(function(){alert("hi")},1000);
+		};
+	</script>
+	<p id="time"></p>
+	<button type="button" onclick="myTimer()">현재시간</button>
+	<script>
+
+		setInterval(myTimer,1000);
+
+		function myTimer(){
+			var d = new Date();
+			var t = d.toLocaleTimeString();
+			$("#time").html(t);
+		}
+		myTimer();
+	</script>
+</body>
+</html>
