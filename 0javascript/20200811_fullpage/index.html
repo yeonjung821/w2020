@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	<script>
+		$(function(){
+			$("#fullpage").fullpage({
+				anchors:["a1st","a2st","a3st","a4st"],
+				menu:"#topMenu" //anchors값과 menu값 넣으면 자동으로 만들어지니 설정값들만 입력하면됨. 
+			});
+		});
+	</script>
+	<style>
+		#page1{background-image: url(images/bg1.jpg);}
+		#page2{background-image: url(images/bg2.jpg);}
+		#page3{background-image: url(images/bg3.jpg);}
+		#page4{background-image: url(images/bg4.jpg);}
+		
+		.section{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+		nav#navTop{
+			position: fixed;z-index: 1;width: 100%;
+			background-color: #cdcdcd;
+		}
+		nav#navTop li{float: left;}
+		nav#navTop li a{display: block;line-height: 50px;text-align: center;padding: 0 10px;}
+	</style>
+</head>
+<body>
+	<nav id="navTop">
+		<ul id="topMenu" class="clearfix">
+			<!-- li*4>a[#a$st]>{MENU$} -->
+			<li data-menuanchor="a1st"><a href="#a1st">MENU1</a></li>
+			<li data-menuanchor="a2st"><a href="#a2st">MENU2</a></li>
+			<li data-menuanchor="a3st"><a href="#a3st">MENU3</a></li>
+			<li data-menuanchor="a4st"><a href="#a4st">MENU4</a></li>
+		</ul>
+	</nav>
+	<div id="fullpage">
+		<div class="section" id="page1" data-anchor="a1st"></div>
+		<div class="section" id="page2" data-anchor="a2st"></div>
+		<div class="section" id="page3" data-anchor="a3st"></div>
+		<div class="section" id="page4" data-anchor="a4st"></div>
+	</div>
+</body>
+</html>

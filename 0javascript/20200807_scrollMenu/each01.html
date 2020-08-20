@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>each</title>
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(function(){
+			$("button").click(function(){
+				$("li").each(function(index){
+					alert(index + ". "+ $(this).text());
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>button</button>
+	<ul>
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+	</ul>
+	
+</body>
+</html>
